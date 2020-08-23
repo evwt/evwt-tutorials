@@ -49,8 +49,20 @@
         slot="aside"
         title="main.js"
         :text="install2"
+        lang="javascript"
+        :highlight-lines="[/element/i]" />
+    </tutorial-step>
+
+    <tutorial-step slot="step">
+      <p>
+        You should now be able to run your app to verify everything works correctly.
+      </p>
+
+      <tutorial-highlighter
+        slot="aside"
+        text="npm run electron:serve"
         lang="bash"
-        :highlight-lines="[/element/i]"
+        :highlight-lines="[1]"
         :line-numbers="false" />
     </tutorial-step>
   </tutorial-section>
