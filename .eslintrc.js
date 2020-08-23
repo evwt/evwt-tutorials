@@ -63,11 +63,6 @@ module.exports = {
       singleline: 'never',
       multiline: 'never'
     }],
-    'vue/singleline-html-element-content-newline': ['error', {
-      ignoreWhenNoAttributes: true,
-      ignoreWhenEmpty: true,
-      ignores: ['vue-code-highlight', 'pre', 'textarea']
-    }],
     'vue/html-closing-bracket-spacing': ['error', {
       startTag: 'never',
       endTag: 'never',
