@@ -30,7 +30,7 @@
 
     <tutorial-step slot="step">
       <p>
-        For this app, we'll also add <a href="https://element.eleme.io/#/en-US/component/form" target="_blank">element-ui</a> for their form components.
+        For this app, we'll also install <a href="https://element.eleme.io/#/en-US/component/form" target="_blank">element-ui</a> for their form components.
       </p>
       <tutorial-highlighter
         slot="aside"
@@ -42,7 +42,7 @@
 
     <tutorial-step slot="step">
       <p>
-        To finish the setup, add element-ui to main.js.
+        Add these lines to your <tt>main.js</tt> to install element-ui.
       </p>
 
       <tutorial-highlighter
@@ -50,6 +50,7 @@
         title="main.js"
         :text="install2"
         lang="javascript"
+        :line-numbers="false"
         :highlight-lines="[/element/i]" />
     </tutorial-step>
 
@@ -75,19 +76,10 @@ cd my-app
 vue add evwt
 npm install element-ui`;
 
-let install2 = `import Vue from 'vue';
-import ElementUI from 'element-ui';
-import App from './App.vue';
+let install2 = `import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-Vue.use(ElementUI, { size: 'small' });
-
-Vue.config.productionTip = false;
-
-new Vue({
-  render: (h) => h(App),
-}).$mount('#app');
-`;
+Vue.use(ElementUI, { size: 'small' });`;
 
 export default {
   data() {
